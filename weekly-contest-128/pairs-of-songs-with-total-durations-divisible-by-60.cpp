@@ -6,12 +6,15 @@ public:
 		int i = 0;
 		int j;
 		int count = 0;
-		while (i < (time.size() - 1))
+		int size = time.size();
+		int itime = 0;
+		while (i < (size - 1))
 		{
 			j = i + 1;
-			while (j < time.size())
+			itime = time[i];
+			while (j < size)
 			{
-				if (((time[i] + time[j]) % 60) == 0)
+				if (((itime + time[j]) % 60) == 0)
 					count++;
 				j++;
 			}	
